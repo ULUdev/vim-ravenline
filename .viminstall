@@ -1,0 +1,8 @@
+echo 'preparing'
+call system('mkdir -p ~/.vim/doc')
+call system('mkdir -p ~/.vim/plugins')
+echo 'pulling down ravenline ...'
+call system('curl -s https://gitlab.sokoll.com/moritz/vim-ravenline/-/raw/master/raven-line.vim > ~/.vim/plugins/raven-line.vim')
+call system('curl -s https://gitlab.sokoll.com/moritz/vim-ravenline/-/raw/master/raven-line.txt > ~/.vim/doc/raven-line.txt')
+helptags ~/.vim/doc
+echo 'done!'
